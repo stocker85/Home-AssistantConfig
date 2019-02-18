@@ -1,0 +1,151 @@
+  kitchen:
+    name: Køkken
+    icon: mdi:pot-mix
+    entities:
+      - light.kkken_1
+      - light.kkken_2
+      - light.kkken_3
+      - light.kkken_spot_1
+      - light.kkken_spot_2
+      - light.kkken_spot_3
+  livingroom:
+    name: Stue
+    icon: mdi:sofa
+    entities:
+      - light.stue_stander_2
+      - light.stue_vindue
+      - media_player.chromecast0036
+  toilet:
+    name: Toilet
+    icon: mdi:toilet
+    entities:
+      - light.toilet_1_2
+      - light.toilet_2_2
+  bathroom:
+    name: Badeværelse
+    icon: mdi:shower-head
+    entities:
+      - light.toilet_1
+      - light.toilet_2
+      - light.toilet_3
+      - light.toilet_4
+      - light.toilet_5
+      - light.toilet_6
+  office:
+    name: Kontor
+    icon: mdi:desktop-classic
+    entities:
+      - light.kontor
+      - media_player.office_tv
+  bryggers:
+    name: Bryggers
+    icon: mdi:washing-machine
+    entities:
+      - light.bryggers_1
+  bedroom:
+    name: Soveværelse
+    icon: mdi:bed-empty
+    entities:
+      - light.sovevrelse
+  garden:
+    name: Have
+    icon: mdi:tree
+    entities:
+      - light.have_1
+      - light.have_2
+      - light.have_3
+      - light.have_4
+      - light.have_5
+  rasmus:
+    name: Rasmus
+    control: hidden
+    icon: mdi:human-handsdown
+    entities:
+      - device_tracker.rasmusiphone
+      - device_tracker.rasmusiphone_bt
+  signe:
+    name: Signe
+    control: hidden
+    icon: mdi:human-female
+    entities:
+      - device_tracker.signes_iphone
+      - device_tracker.signes_iphone_bt
+  henning:
+    name: Henning
+    control: hidden
+    icon: mdi:human-handsdown
+    entities:
+      - device_tracker.galaxy_s6
+      - device_tracker.galaxy_s6_bt
+  charlotte:
+    name: Charlotte
+    control: hidden
+    icon: mdi:human-female
+    entities:
+      - device_tracker.charlotte_iphone
+      - device_tracker.charlotte_iphone_bt
+  persons:
+    name: Who is home
+    control: hidden
+    entities:
+      - group.rasmus
+      - group.signe
+      - group.henning
+      - group.charlotte
+  automation_view:
+    name: Automation
+    control: hidden
+    entities:
+      - group.all_automations
+  devices:
+    name: Devices
+    control: hidden
+    entities:
+      - device_tracker.rasmusiphone_bt
+      - device_tracker.desktop_34slfr8_bt
+      - device_tracker.galaxy_s6_bt
+      - device_tracker.signes_iphone_bt
+      - device_tracker.charlotte_iphone
+      - device_tracker.charlotte_iphone_bt
+      - device_tracker.signes_iphone
+  indoor:
+    name: Indoor Lights
+    control: hidden
+    entities:
+      - group.kitchen
+      - group.livingroom
+      - group.bathroom
+      - group.toilet
+      - group.bedroom
+      - group.bryggers
+      - group.office
+      - group.room
+  outdoor:
+    name: Outdoor Lights
+    control: hidden
+    entities:
+      - group.garden
+  room:
+    name: Værelse
+    control: hidden
+    icon: mdi:pig
+    entities:
+      - light.vaerelse_1
+      - light.vaerelse_2
+      - light.vaerelse_3
+  small_room:
+    name: "Lille værelse"
+    control: hidden
+    icon: mdi:baby-buggy
+    entities:
+      - light.lille_vaerelse_1
+      - light.lille_vaerelse_2
+      - light.lille_vaerelse_3
+  foyer:
+    name: Foyer
+    control: hidden
+    icon: mdi:door
+    entities:
+      - light.gang
+      - light.kaelder
+      - light.repo

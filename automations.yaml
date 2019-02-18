@@ -1,0 +1,164 @@
+- id: '1547345609071'
+  alias: Home_Light_On
+  trigger:
+  - entity_id: group.Devices
+    from: not_home
+    platform: state
+    to: home
+  condition: []
+  action:
+  - data:
+      brightness_pct: 80
+      entity_id: group.office
+      kelvin: 2700
+    service: light.turn_on
+  - data:
+      brightness_pct: 80
+      entity_id: group.kitchen
+      kelvin: 2700
+    service: light.turn_on
+  - data:
+      brightness_pct: 80
+      entity_id: group.bryggers
+      kelvin: 2700
+    service: light.turn_on
+  - data:
+      brightness_pct: 80
+      entity_id: group.toilet
+      kelvin: 2700
+    service: light.turn_on
+  - data:
+      brightness_pct: 80
+      entity_id: group.bathroom
+      kelvin: 2700
+    service: light.turn_on
+  - data:
+      brightness_pct: 80
+      entity_id: group.Bedroom
+      kelvin: 2700
+    service: light.turn_on
+  - data:
+      brightness_pct: 80
+      entity_id: group.livingroom
+      kelvin: 2700
+    service: light.turn_on
+  - data:
+      brightness_pct: 80
+      entity_id: group.room
+      kelvin: 2700
+    service: light.turn_on
+  - data:
+      brightness_pct: 80
+      entity_id: group.small_room
+      kelvin: 2700
+    service: light.turn_on
+  - data:
+      brightness_pct: 80
+      entity_id: group.foyer
+      kelvin: 2700
+    service: light.turn_on
+- id: '1547345729642'
+  alias: Away_Light_Off
+  trigger:
+  - entity_id: group.Devices
+    from: home
+    platform: state
+    to: not_home
+  condition: []
+  action:
+  - data:
+      entity_id: group.office
+    service: light.turn_off
+  - data:
+      entity_id: group.kitchen
+    service: light.turn_off
+  - data:
+      entity_id: group.bryggers
+    service: light.turn_off
+  - data:
+      entity_id: group.toilet
+    service: light.turn_off
+  - data:
+      entity_id: group.bathroom
+    service: light.turn_off
+  - data:
+      entity_id: group.Bedroom
+    service: light.turn_off
+  - data:
+      entity_id: group.livingroom
+    service: light.turn_off
+  - data:
+      entity_id: group.room
+    service: light.turn_off
+  - data:
+      entity_id: group.small_room
+    service: light.turn_off
+  - data:
+      entity_id: group.foyer
+    service: light.turn_off
+- id: '1547763600882'
+  alias: Turn_on_garden_lights
+  trigger:
+  - entity_id: light.have_1
+    from: 'off'
+    platform: state
+    to: 'on'
+  condition: []
+  action:
+  - data:
+      brightness_pct: 80
+      entity_id: group.garden
+      kelvin: 2700
+    service: light.turn_on
+- id: '1547764156786'
+  alias: Turn_off_garden_lights
+  trigger:
+  - entity_id: light.have_1
+    from: 'on'
+    platform: state
+    to: 'off'
+  - entity_id: light.have_1
+    from: 'on'
+    platform: state
+    to: Unavailable
+  condition: []
+  action:
+  - data:
+      entity_id: group.garden
+    service: light.turn_off
+- id: '1548268738619'
+  alias: Door_light_on
+  trigger:
+  - event: sunset
+    offset: -01:00:00
+    platform: sun
+  condition: []
+  action:
+  - data:
+      brightness_pct: 80
+      entity_id: light.dor
+      kelvin: 2700
+    service: light.turn_on
+- id: '1548269123766'
+  alias: Door_light_off
+  trigger:
+  - event: sunrise
+    offset: +01:00:00
+    platform: sun
+  condition: []
+  action:
+  - data:
+      entity_id: light.dor
+    service: light.turn_off
+- id: '1548713826508'
+  alias: Signe_morning
+  trigger:
+  - at: "06:30:00"
+    platform: time
+  condition: []
+  action:
+  - data:
+      brightness_pct: 80
+      entity_id: group.room
+      kelvin: 2700
+    service: light.turn_on
