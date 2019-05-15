@@ -137,10 +137,6 @@ tts:
 cloud:
 
 panel_iframe:
- configurator:
-  title: IDE
-  icon: mdi:code-braces
-  url: https://autobahn.duckdns.org:8321
  pihole:
   title: Pi-hole
   icon: mdi:block-helper
