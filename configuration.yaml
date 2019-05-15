@@ -99,7 +99,7 @@ zone:
     icon: mdi:worker
 
 # Track the sun
-sun:
+#sun:
 # Sensors
 sensor:
   # Weather prediction
