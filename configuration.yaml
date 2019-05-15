@@ -160,6 +160,7 @@ recorder:
   purge_interval: 1
 
 #links in menu
+panel_iframe:
  pihole:
   title: Pi-hole
   icon: mdi:block-helper

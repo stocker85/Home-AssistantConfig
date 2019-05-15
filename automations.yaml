@@ -9,47 +9,12 @@
   action:
   - data:
       brightness_pct: 80
-      entity_id: group.office
-      kelvin: 2700
-    service: light.turn_on
-  - data:
-      brightness_pct: 80
       entity_id: group.kitchen
       kelvin: 2700
     service: light.turn_on
   - data:
       brightness_pct: 80
-      entity_id: group.bryggers
-      kelvin: 2700
-    service: light.turn_on
-  - data:
-      brightness_pct: 80
-      entity_id: group.toilet
-      kelvin: 2700
-    service: light.turn_on
-  - data:
-      brightness_pct: 80
-      entity_id: group.bathroom
-      kelvin: 2700
-    service: light.turn_on
-  - data:
-      brightness_pct: 80
-      entity_id: group.Bedroom
-      kelvin: 2700
-    service: light.turn_on
-  - data:
-      brightness_pct: 80
       entity_id: group.livingroom
-      kelvin: 2700
-    service: light.turn_on
-  - data:
-      brightness_pct: 80
-      entity_id: group.room
-      kelvin: 2700
-    service: light.turn_on
-  - data:
-      brightness_pct: 80
-      entity_id: group.small_room
       kelvin: 2700
     service: light.turn_on
   - data:
@@ -153,7 +118,7 @@
 - id: '1548713826508'
   alias: Signe_morning
   trigger:
-  - at: "06:30:00"
+  - at: 06:30:00
     platform: time
   condition: []
   action:
@@ -161,4 +126,28 @@
       brightness_pct: 80
       entity_id: group.room
       kelvin: 2700
+    service: light.turn_on
+- id: '1552245291989'
+  alias: Kontor_lys
+  trigger:
+  - event: sunset
+    offset: -02:00
+    platform: sun
+  - entity_id: device_tracker.desktop_34slfr8
+    from: not_home
+    platform: state
+    to: home
+  - entity_id: device_tracker.desktop_34slfr8_bt
+    from: not_home
+    platform: state
+    to: home
+  condition:
+  - condition: state
+    entity_id: person.rasmus
+    state: home
+  action:
+  - data:
+      brightness_pct: 80
+      entity_id: group.office
+      kelvin: 2200
     service: light.turn_on
