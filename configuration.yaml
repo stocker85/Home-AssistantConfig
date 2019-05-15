@@ -52,21 +52,21 @@ discovery:
 #Tracks Devices
 device_tracker:
 # Show devices on WLAN Network through the Unifi Controller
-#  - platform: unifi
-#    host: 192.168.2.20
-#    port: 8443
-#    site_id: default
-#    username: !secret unifi_username
-#    password: !secret unifi_password
-#    verify_ssl: false
-#    interval_seconds: 30
-#    new_device_defaults:
-#      track_new_devices: false
-#    ssid_filter: Autobahn
-  - platform: unifi_direct
-    host: 192.168.2.9
-    username: !secret unifi_ap_username
-    password: !secret unifi_ap_password
+  - platform: unifi
+    host: 192.168.2.20
+    port: 8443
+    site_id: default
+    username: !secret unifi_username
+    password: !secret unifi_password
+    verify_ssl: false
+    interval_seconds: 5
+    new_device_defaults:
+      track_new_devices: false
+    ssid_filter: Autobahn
+#  - platform: unifi_direct
+#    host: 192.168.2.9
+#    username: !secret unifi_ap_username
+#    password: !secret unifi_ap_password
 
   - platform: bluetooth_tracker
     interval_seconds: 5
@@ -95,11 +95,15 @@ zone:
   - name: Work
     latitude: !secret latitude_work
     longitude: !secret longitude_work
-    radius: 200
+    radius: 150
     icon: mdi:worker
-
+  - name: Home
+    latitude: !secret latitude_home
+    longitude: !secret longitude_home
+    radius: 50
+    icon: mdi:house
 # Track the sun
-#sun:
+sun:
 # Sensors
 sensor:
   # Weather prediction
@@ -131,12 +135,31 @@ sensor:
       - unique_clients
 # Text to speech
 tts:
-  - platform: google
-
+  - platform: google_translate
+    service_name: google_say
+#Google Home api
+google_assistant:
+  project_id: home-project-3eb47
+  api_key: AIzaSyC3qKcc2KdLPqT2FfEgdsEV_pBaB0a_o8g
+  exposed_domains:
+    - switch
+    - light
+    - group
+#shopping list
+shopping_list:
+#Person
+person:
+#system health
+system_health:
 # Cloud
 cloud:
 
-panel_iframe:
+#clean DB
+recorder:
+  purge_keep_days: 2
+  purge_interval: 1
+
+#links in menu
  pihole:
   title: Pi-hole
   icon: mdi:block-helper
@@ -145,4 +168,3 @@ panel_iframe:
 group: !include groups.yaml
 automation: !include automations.yaml
 script: !include scripts.yaml
-
