@@ -14,7 +14,6 @@
     entities:
       - light.stue_stander_2
       - light.stue_vindue
-      - media_player.chromecast0036
   toilet:
     name: Toilet
     icon: mdi:toilet
@@ -36,7 +35,6 @@
     icon: mdi:desktop-classic
     entities:
       - light.kontor
-      - media_player.office_tv
   bryggers:
     name: Bryggers
     icon: mdi:washing-machine
