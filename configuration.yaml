@@ -52,17 +52,17 @@ discovery:
 #Tracks Devices
 device_tracker:
 # Show devices on WLAN Network through the Unifi Controller
-  - platform: unifi
-    host: 192.168.2.20
-    port: 8443
-    site_id: default
-    username: !secret unifi_username
-    password: !secret unifi_password
-    verify_ssl: false
-    interval_seconds: 5
-    new_device_defaults:
-      track_new_devices: false
-    ssid_filter: Autobahn
+#  - platform: unifi
+#    host: 192.168.2.20
+#    port: 8443
+#    site_id: default
+#    username: !secret unifi_username
+#    password: !secret unifi_password
+#    verify_ssl: false
+#    interval_seconds: 5
+#    new_device_defaults:
+#      track_new_devices: false
+#    ssid_filter: Autobahn
 #  - platform: unifi_direct
 #    host: 192.168.2.9
 #    username: !secret unifi_ap_username
