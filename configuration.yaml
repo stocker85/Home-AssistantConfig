@@ -161,7 +161,7 @@ recorder:
 
 #links in menu
 panel_iframe:
- UBNT:
+ ubnt:
   title: UBNT
   icon: mdi:router-wireless-settings
   url: https://autobahn.duckdns.org:8443/
