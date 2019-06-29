@@ -68,10 +68,10 @@ device_tracker:
 #    username: !secret unifi_ap_username
 #    password: !secret unifi_ap_password
 
-  - platform: bluetooth_tracker
-    interval_seconds: 5
-    consider_home: 600
-    track_new_devices: true
+#  - platform: bluetooth_tracker
+#    interval_seconds: 5
+#    consider_home: 600
+#    track_new_devices: true
 # Allows you to issue voice commands from the frontend in enabled browsers
 conversation:
 
