@@ -164,7 +164,7 @@ panel_iframe:
  ubnt:
   title: UBNT
   icon: mdi:router-wireless-settings
-  url: https://autobahn.duckdns.org:8443/manage/site/default/dashboard
+  url: https://192.168.2.20:8443
 
 group: !include groups.yaml
 automation: !include automations.yaml
