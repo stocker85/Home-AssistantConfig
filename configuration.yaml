@@ -125,14 +125,14 @@ sensor:
       - highClouds
       - dewpointTemperature
   # MGQTT
-  - platform: pi_hole
-    host: autobahn.duckdns.org:4865
-    ssl: true
-    verify_ssl: false
-    monitored_conditions:
-      - ads_blocked_today
-      - dns_queries_today
-      - unique_clients
+  #- platform: pi_hole
+  #  host: autobahn.duckdns.org:4865
+  #  ssl: true
+  #  verify_ssl: false
+  #  monitored_conditions:
+  #    - ads_blocked_today
+  #    - dns_queries_today
+  #    - unique_clients
 # Text to speech
 tts:
   - platform: google_translate
