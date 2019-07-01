@@ -107,23 +107,23 @@ sun:
 # Sensors
 sensor:
   # Weather prediction
-  - platform: yr
-    name: Weather
-    forecast: 48
-    monitored_conditions:
-      - temperature
-      - symbol
-      - precipitation
-      - windSpeed
-      - pressure
-      - windDirection
-      - humidity
-      - fog
-      - cloudiness
-      - lowClouds
-      - mediumClouds
-      - highClouds
-      - dewpointTemperature
+  #- platform: yr
+  #  name: Weather
+  #  forecast: 48
+  #  monitored_conditions:
+  #    - temperature
+  #    - symbol
+  #    - precipitation
+  #    - windSpeed
+  #    - pressure
+  #    - windDirection
+  #    - humidity
+  #    - fog
+  #    - cloudiness
+  #    - lowClouds
+  #    - mediumClouds
+  #    - highClouds
+  #    - dewpointTemperature
   # MGQTT
   #- platform: pi_hole
   #  host: autobahn.duckdns.org:4865
