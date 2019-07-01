@@ -101,7 +101,7 @@ zone:
     latitude: !secret latitude_home
     longitude: !secret longitude_home
     radius: 50
-    icon: mdi:house
+    icon: mdi:home
 # Track the sun
 sun:
 # Sensors
