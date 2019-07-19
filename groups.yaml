@@ -13,6 +13,7 @@
     icon: mdi:sofa
     entities:
       - light.stue_stander_2
+      - light.stue_stander_1
       - light.stue_vindue
   toilet:
     name: Toilet
