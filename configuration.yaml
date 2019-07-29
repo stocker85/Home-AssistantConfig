@@ -30,7 +30,7 @@ http:
   base_url: https://autobahn.duckdns.org
   ssl_certificate: /ssl/fullchain.pem
   ssl_key: /ssl/privkey.pem
-  server_port: 8123
+  server_port: 81
   ip_ban_enabled: True
   login_attempts_threshold: 3
 # Checks for available updates
@@ -54,7 +54,7 @@ device_tracker:
 # Show devices on WLAN Network through the Unifi Controller
   - platform: unifi
     host: 192.168.2.20
-    port: 8443
+    port: 8449
     site_id: default
     username: !secret unifi_username
     password: !secret unifi_password
