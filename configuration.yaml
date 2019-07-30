@@ -30,7 +30,7 @@ http:
   base_url: https://autobahn.duckdns.org
   ssl_certificate: /ssl/fullchain.pem
   ssl_key: /ssl/privkey.pem
-  server_port: 81
+  server_port: 8123
   ip_ban_enabled: True
   login_attempts_threshold: 3
 # Checks for available updates
@@ -67,14 +67,12 @@ device_tracker:
 #    host: 192.168.2.9
 #    username: !secret unifi_ap_username
 #    password: !secret unifi_ap_password
-
 #  - platform: bluetooth_tracker
 #    interval_seconds: 5
 #    consider_home: 600
 #    track_new_devices: true
 # Allows you to issue voice commands from the frontend in enabled browsers
 conversation:
-
 #Enables MQTT
 #mqtt:
 #  broker: 192.168.2.20
@@ -83,13 +81,10 @@ conversation:
 #    payload: 'online'
 # Enables support for tracking state changes over time
 history:
-
 # View all events in a logbook
 logbook:
-
 # Enables a map showing the location of tracked devices
 map:
-
 # Adds zones to the map
 zone:
   - name: Work
