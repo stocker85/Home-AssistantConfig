@@ -51,7 +51,7 @@ tradfri:
 discovery:
 #Tracks Devices
 device_tracker:
- Show devices on WLAN Network through the Unifi Controller
+ #Show devices on WLAN Network through the Unifi Controller
   - platform: unifi
     host: 192.168.2.20
     port: 8449
