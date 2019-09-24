@@ -135,7 +135,7 @@
   small_room:
     name: "Lille værelse"
     control: hidden
-    icon: mdi:baby-buggy
+    icon: mdi:baby-face-outline
     entities:
       - light.lille_vaerelse_1
       - light.lille_vaerelse_2
