@@ -26,7 +26,7 @@
   alias: Away_Light_Off
   trigger:
   - entity_id: group.persons
-    for: 00:02:00
+    for: 00:10:00
     from: home
     platform: state
     to: not_home
@@ -109,7 +109,6 @@
   alias: Door_light_off
   trigger:
   - event: sunrise
-    offset: +01:00:00
     platform: sun
   condition: []
   action:
