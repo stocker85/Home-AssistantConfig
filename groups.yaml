@@ -119,6 +119,7 @@
       - group.bryggers
       - group.office
       - group.room
+      - group.foyer
   outdoor:
     name: Outdoor Lights
     control: hidden

@@ -1,7 +1,7 @@
 - id: '1547345609071'
   alias: Home_Light_On
   trigger:
-  - entity_id: group.Devices
+  - entity_id: group.persons
     from: not_home
     platform: state
     to: home
