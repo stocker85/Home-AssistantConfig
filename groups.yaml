@@ -87,10 +87,10 @@
     name: Who is home
     control: hidden
     entities:
-      - group.rasmus
-      - group.signe
-      - group.henning
-      - group.charlotte
+      - person.rasmus
+      - person.signe
+      - person.henning
+      - person.charlotte
   automation_view:
     name: Automation
     control: hidden
