@@ -7,20 +7,15 @@
     to: home
   condition: []
   action:
-  - data:
+    service: light.turn_on
+    data:
       brightness_pct: 80
       entity_id: group.kitchen
       kelvin: 2700
-    service: light.turn_on
-  - data:
-      brightness_pct: 80
-      entity_id: group.livingroom
-      kelvin: 2700
-    service: light.turn_on
-  - data:
-      brightness_pct: 80
-      entity_id: group.foyer
-      kelvin: 2700
+      entity_id:
+        - group.kitchen
+        - group.livingroom
+        - group.foyer
     service: light.turn_on
 - id: '1547345729642'
   alias: Away_Light_Off
