@@ -26,8 +26,9 @@
   alias: Away_Light_Off
   trigger:
   - entity_id: group.persons
-    for: 00:02:00
-    from: home
+    for: 
+      minutes: 2
+    from: Home
     platform: state
     to: Away
   condition: []
