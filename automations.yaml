@@ -10,13 +10,11 @@
     service: light.turn_on
     data:
       brightness_pct: 80
-      entity_id: group.kitchen
-      kelvin: 2700
       entity_id:
-        - group.kitchen
-        - group.livingroom
-        - group.foyer
-    service: light.turn_on
+      - group.kitchen
+      - group.livingroom
+      - group.foyer
+      kelvin: 2700
 - id: '1547345729642'
   alias: Away_Light_Off
   trigger:
@@ -28,34 +26,17 @@
   condition: []
   action:
   - data:
-      entity_id: group.office
-    service: light.turn_off
-  - data:
-      entity_id: group.kitchen
-    service: light.turn_off
-  - data:
-      entity_id: group.bryggers
-    service: light.turn_off
-  - data:
-      entity_id: group.toilet
-    service: light.turn_off
-  - data:
-      entity_id: group.bathroom
-    service: light.turn_off
-  - data:
-      entity_id: group.Bedroom
-    service: light.turn_off
-  - data:
-      entity_id: group.livingroom
-    service: light.turn_off
-  - data:
-      entity_id: group.room
-    service: light.turn_off
-  - data:
-      entity_id: group.small_room
-    service: light.turn_off
-  - data:
-      entity_id: group.foyer
+      entity_id:
+      - group.office
+      - group.kitchen
+      - group.bryggers
+      - group.toilet
+      - group.bathroom
+      - group.Bedroom
+      - group.livingroom
+      - group.room
+      - group.small_room
+      - group.Foyer
     service: light.turn_off
 - id: '1547763600882'
   alias: Turn_on_garden_lights
